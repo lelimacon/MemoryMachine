@@ -96,8 +96,6 @@ function resetContainerItems() {
   grid-template-columns: repeat(auto-fit, var(--item-width));
   grid-template-rows: repeat(auto-fit, var(--item-height));
   place-content: space-evenly;
-  width: 100%;
-  height: 100%;
 }
 
 .item {

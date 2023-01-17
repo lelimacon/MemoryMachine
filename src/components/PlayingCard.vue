@@ -22,9 +22,10 @@ const count = ref(0);
 
 <style scoped>
 .playing-card {
-  background-color: blue;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 </style>
