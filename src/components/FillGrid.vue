@@ -80,11 +80,12 @@ function resetContainerItems() {
 
 <template>
 
-  <div id="container"
-       :style="{
-          '--item-width': itemSize.width + 'px',
-          '--item-height': itemSize.height + 'px',
-        }">
+  <div
+      id="container"
+      :style="{
+        '--item-width': itemSize.width + 'px',
+        '--item-height': itemSize.height + 'px',
+      }">
     <slot></slot>
   </div>
 

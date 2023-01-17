@@ -6,14 +6,14 @@ export type Card = {
 }
 
 export enum Type {
-  Classic,
-  Tarot,
+  classic = "classic",
+  tarot = "tarot",
 }
 
 export enum Suit {
-  Clubs,
-  Spades,
-  Hearts,
-  Diamonds,
-  Trumps,
+  clubs = "clubs",
+  spades = "spades",
+  hearts = "hearts",
+  diamonds = "diamonds",
+  trumps = "trumps",
 }

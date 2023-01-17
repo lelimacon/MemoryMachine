@@ -1,18 +1,25 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import { store } from "../store.js";
 
-const count = ref(0);
+const reload = () => {
+  location = location;
+}
 </script>
 
 <template>
   <div class="header">
-    <div class="logo">🎴</div>
-    <div class="title">memory machine</div>
+    <div v-on:click="reload" class="logo">🎴</div>
+    <div v-on:click="reload" class="title">memory machine</div>
+
     <div style="flex-grow: 1"></div>
-      <div style="margin-right: 8px">🌚</div>
-      <input type="checkbox" id="switch" name="switch" role="switch" v-model="store.darkMode">
-      <div>🌝</div>
+
+    <div style="margin-right: 8px">🙈</div>
+    <input type="checkbox" id="switch" name="switch" role="switch" v-model="store.showCards">
+    <div style="margin-right: 26px">🫣</div>
+
+    <div style="margin-right: 8px">🌚</div>
+    <input type="checkbox" id="switch" name="switch" role="switch" v-model="store.lightMode">
+    <div>🌝</div>
   </div>
 </template>
 
@@ -27,10 +34,12 @@ const count = ref(0);
 }
 .logo {
   font-size: 32px;
-  margin-right: 18px
+  margin-right: 18px;
+  cursor: pointer;
 }
 .title {
   color: var(--h1-color);
   letter-spacing: 12px;
+  cursor: pointer;
 }
 </style>

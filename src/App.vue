@@ -11,14 +11,14 @@ import {
 } from './models/PlayingCards';
 
 const cards: Card[] = [];
-for (let i = 0; i < 21; i++)
-  cards.push({ type: Type.Tarot, suit: Suit.Trumps, index: i });
+for (let i = 1; i <= 22; i++)
+  cards.push({ type: Type.tarot, suit: Suit.trumps, index: i });
 </script>
 
 <template>
-  <div class="main" :data-theme="store.darkMode ? 'light' : 'dark'">
+  <div class="main" :data-theme="store.lightMode ? 'light' : 'dark'">
     <Header />
-    <FillGrid class="card-grid" :aspectRatio="8 / 12" :maxRows="8" :minGap="12">
+    <FillGrid class="card-grid" :aspectRatio="1536 / 2663" :maxRows="10" :minGap="22">
       <PlayingCard v-for="c in cards" :card="c" />
     </FillGrid>
   </div>
