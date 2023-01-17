@@ -5,7 +5,7 @@ import {
   Card,
 } from '../models/PlayingCards';
 
-var props = defineProps<{
+const props = defineProps<{
   card: Card,
 }>()
 
@@ -16,11 +16,13 @@ const select = () => {
 };
 
 const getCardUrl = () => {
-  var suit = props.card.suit;
-  var type = props.card.type;
+  const baseUrl = 'url(' + import.meta.env.BASE_URL + 'cards/';
+  console.log(baseUrl);
+  const suit = props.card.suit;
+  const type = props.card.type;
   if (selected.value && !store.showCards)
-    return 'url(/cards/' + type + '/back.jpg)';
-  return 'url(/cards/' + type + '/' + suit + '_' + props.card.index + '.jpg)';
+    return baseUrl + type + '/back.jpg)';
+  return baseUrl + type + '/' + suit + '_' + props.card.index + '.jpg)';
 }
 </script>
 
