@@ -1,9 +1,11 @@
-name: Build Vue
-on: [push]
+name: pages
+on: [ push ]
+
 jobs:
-  pages:
+  gh-pages:
     runs-on: ubuntu-latest
-    name: pages
+    name: gh-pages
+
     steps:
     - uses: actions/checkout@v2
     - id: VuePages
