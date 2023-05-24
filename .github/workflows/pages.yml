@@ -1,7 +1,7 @@
 name: Build Vue
 on: [push]
 jobs:
-  build_vue:
+  pages:
     runs-on: ubuntu-latest
     name: Build Vue
     steps:
